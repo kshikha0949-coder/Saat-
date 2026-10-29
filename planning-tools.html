@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planning Tools — SAAT</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="siteHeader" data-dark="false">
+  <div class="wrap">
+    <a href="index.html" class="logo">SAAT</a>
+    <nav class="mainnav">
+      <div class="navitem"><a class="navlink" href="index.html">Home</a></div>
+      <div class="navitem"><a class="navlink" href="vendors.html">Vendors</a>
+        <div class="dropdown">
+          <a href="vendors.html">Photographers</a><a href="vendors.html">Decorators</a><a href="vendors.html">Caterers</a>
+          <a href="vendors.html">Makeup Artists</a><a href="vendors.html">Wedding Planners</a>
+        </div>
+      </div>
+      <div class="navitem"><a class="navlink" href="inspiration.html">Inspiration</a>
+        <div class="dropdown">
+          <a href="inspiration.html">Bridal Looks</a><a href="inspiration.html">Decor</a><a href="inspiration.html">Mehndi &amp; Haldi</a>
+          <a href="inspiration.html">Jewellery</a><a href="inspiration.html">Mandap Design</a>
+        </div>
+      </div>
+      <div class="navitem"><a class="navlink" href="real-weddings.html">Real Weddings</a></div>
+      <div class="navitem"><a class="navlink" href="journal.html">Wedding Journal</a></div>
+      <div class="navitem"><a class="navlink current" href="planning-tools.html">Planning Tools</a>
+        <div class="dropdown">
+          <a href="#budget">Budget Calculator</a><a href="#checklist">Wedding Checklist</a>
+          <a href="inspiration.html#moodboard">Moodboard</a><a href="vendors.html#compare">Compare Vendors</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-right">
+      <span class="iconbtn">&#9906;</span>
+      <a href="#" class="login-link">Log In</a>
+      <a href="#" class="btn btn-solid btn-start">Start Planning</a>
+      <button class="burger">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <span class="drawer-close">&times;</span>
+  <a href="index.html">Home</a>
+  <a href="vendors.html">Vendors</a>
+  <a href="inspiration.html">Inspiration</a>
+  <a href="real-weddings.html">Real Weddings</a>
+  <a href="journal.html">Wedding Journal</a>
+  <a href="planning-tools.html">Planning Tools</a>
+  <a href="#" style="color:var(--wine);">Log In</a>
+</div>
+
+<div class="page-banner" style="background-image:url('https://images.unsplash.com/photo-1610548067022-8a1ee85d6c5a?q=80&w=1800&auto=format&fit=crop');">
+  <div class="overlay"></div>
+  <div class="page-banner-inner">
+    <span class="kicker">Plan With Clarity</span>
+    <h1>Planning Tools</h1>
+    <p>Budget, checklist and countdown — the three things every couple actually uses.</p>
+  </div>
+</div>
+
+<section id="budget">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">No Surprises Later</span>
+      <h2>Plan Your Wedding Budget</h2>
+      <p>Know where your money goes before you start booking.</p>
+    </div>
+    <div class="budget-wrap reveal">
+      <div>
+        <div class="budget-total">
+          <label>YOUR TOTAL WEDDING BUDGET</label>
+          <div class="amount-row"><span>&#8377;</span><input type="number" id="budgetInput" value="1000000" min="100000" step="10000"></div>
+          <input type="range" id="budgetSlider" min="200000" max="5000000" step="10000" value="1000000">
+        </div>
+        <div id="catRows"></div>
+      </div>
+      <div class="budget-chart-card">
+        <div class="donut-wrap">
+          <svg id="donut" width="200" height="200" viewBox="0 0 42 42" style="transform:rotate(-90deg);"></svg>
+          <div class="legend" id="legend"></div>
+        </div>
+        <div style="text-align:center;margin-top:26px;"><a href="#" class="btn btn-solid">Build My Budget</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="checklist" style="background:var(--ivory-deep);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">One Step At A Time</span>
+      <h2>Your Wedding Checklist</h2>
+      <p>Stay organized from the first decision to the final celebration.</p>
+    </div>
+    <div class="checklist-wrap reveal">
+      <div class="checklist-scroll">
+        <div class="checklist-group">
+          <div class="cg-title">12 Months Before</div>
+          <div class="check-item done"><input type="checkbox" checked><label>Set budget</label></div>
+          <div class="check-item done"><input type="checkbox" checked><label>Choose wedding date</label></div>
+          <div class="check-item"><input type="checkbox"><label>Book venue</label></div>
+        </div>
+        <div class="checklist-group">
+          <div class="cg-title">9 Months Before</div>
+          <div class="check-item done"><input type="checkbox" checked><label>Photographer</label></div>
+          <div class="check-item"><input type="checkbox"><label>Decorator</label></div>
+          <div class="check-item"><input type="checkbox"><label>Wedding planner</label></div>
+        </div>
+        <div class="checklist-group">
+          <div class="cg-title">6 Months Before</div>
+          <div class="check-item done"><input type="checkbox" checked><label>Outfits</label></div>
+          <div class="check-item done"><input type="checkbox" checked><label>Jewellery</label></div>
+          <div class="check-item"><input type="checkbox"><label>Invitations</label></div>
+        </div>
+        <div class="checklist-group">
+          <div class="cg-title">3 Months Before</div>
+          <div class="check-item"><input type="checkbox"><label>Guest list</label></div>
+          <div class="check-item"><input type="checkbox"><label>Makeup artist</label></div>
+          <div class="check-item"><input type="checkbox"><label>Entertainment</label></div>
+        </div>
+        <div class="checklist-group">
+          <div class="cg-title">1 Month Before</div>
+          <div class="check-item"><input type="checkbox"><label>Vendor confirmations</label></div>
+          <div class="check-item"><input type="checkbox"><label>Final payments</label></div>
+          <div class="check-item"><input type="checkbox"><label>Wedding timeline</label></div>
+        </div>
+      </div>
+      <div class="progress-card">
+        <div style="font-size:12px;letter-spacing:1px;color:var(--gold-light);margin-bottom:10px;">OVERALL PROGRESS</div>
+        <div class="progress-num" id="progressNum">68%</div>
+        <div style="font-size:13px;color:rgba(250,246,239,0.7);">Complete</div>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <a href="#" class="btn btn-light" style="width:100%;justify-content:center;margin-top:20px;">Open Full Checklist</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="countdown">
+  <div class="wrap">
+    <span class="kicker" style="color:var(--gold-light);">Every Day Counts</span>
+    <h2>The Countdown Begins</h2>
+    <div class="cd-numbers">
+      <div><div class="cdnum" id="cdDays">126</div><div class="cdlabel">DAYS</div></div>
+      <div><div class="cdnum" id="cdHours">08</div><div class="cdlabel">HOURS</div></div>
+      <div><div class="cdnum" id="cdMins">32</div><div class="cdlabel">MINUTES</div></div>
+    </div>
+    <p style="color:rgba(255,255,255,0.75);">Until the big day</p>
+    <div class="cd-set">
+      <input type="date" id="weddingDate">
+      <button class="btn btn-light" onclick="setCountdown()">Set My Date</button>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <span class="kicker" style="color:var(--gold-light);">The Seventh Vow Awaits</span>
+    <h2>Ready to Plan Your Dream Wedding?</h2>
+    <p>From the first idea to the final celebration, we're here to help you create a day you'll always remember.</p>
+    <div class="final-btns">
+      <a href="vendors.html" class="btn btn-solid">Explore Vendors</a>
+      <a href="inspiration.html" class="btn btn-light">Explore Inspiration</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">SAAT</div>
+        <p>A wedding planning house for couples who want every ritual, and every rupee, to feel considered.</p>
+        <div class="fsocial">
+          <a href="#">IG</a><a href="#">FB</a><a href="#">PIN</a><a href="#">YT</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>WEDDINGS</h5><a href="planning-tools.html">Wedding Planning</a><a href="inspiration.html">Wedding Styles</a><a href="real-weddings.html">Real Weddings</a></div>
+      <div class="fcol"><h5>VENDORS</h5><a href="vendors.html">Photographers</a><a href="vendors.html">Decorators</a><a href="vendors.html">Caterers</a><a href="vendors.html">Makeup Artists</a><a href="vendors.html">Wedding Planners</a></div>
+      <div class="fcol"><h5>INSPIRATION</h5><a href="inspiration.html">Wedding Ideas</a><a href="inspiration.html">Bridal</a><a href="inspiration.html">Decor</a><a href="inspiration.html">Mehndi</a><a href="inspiration.html">Haldi</a><a href="inspiration.html">Sangeet</a></div>
+      <div class="fcol"><h5>PLANNING</h5><a href="#budget">Budget Calculator</a><a href="#checklist">Wedding Checklist</a><a href="inspiration.html#moodboard">Moodboard</a><a href="vendors.html#compare">Vendor Comparison</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SAAT. All Rights Reserved.</span>
+      <span>About Us &nbsp;&middot;&nbsp; Contact &nbsp;&middot;&nbsp; Careers &nbsp;&middot;&nbsp; Privacy Policy &nbsp;&middot;&nbsp; Terms</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
